@@ -30,7 +30,7 @@ const Impact: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Making Real Impact</h2>
           <div className="w-20 h-1 bg-red-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Every rev of an engine, every car show, and every rally we organize translates into tangible support for our community. Here's how we're making a difference.
+            Fuel for the Folks is dedicated to making a meaningful difference in the lives of those in need. Our events support a variety of causes, from veterans' assistance programs and children's hospitals to cancer patients and emergency relief efforts.
           </p>
         </div>
         
@@ -53,9 +53,9 @@ const Impact: React.FC = () => {
           
           <ImpactCard 
             icon={<Gift className="h-6 w-6 text-white" />}
-            title="Holiday Toy Drives"
-            description="Ensuring every child experiences the magic of the holidays through our annual toy drive. We fill performance cars with gifts and deliver joy to families in need."
-            stats="5,000+ Toys Delivered"
+            title="Community Impact"
+            description="By leveraging our shared love for MR2 cars, we aim to create a ripple effect of generosity and support across the DMV area and beyond."
+            stats="5,000+ Lives Touched"
             color="bg-amber-600"
           />
         </div>

@@ -9,7 +9,7 @@ const Mission: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Mission</h2>
           <div className="w-20 h-1 bg-red-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            We unite the passion of car enthusiasts with the power of community service to create meaningful change in people's lives.
+            At Fuel for the Folks, our mission is to harness the passion and camaraderie of the MR2 car community to drive positive change.
           </p>
         </div>
         
@@ -17,13 +17,13 @@ const Mission: React.FC = () => {
           <div className="order-2 md:order-1">
             <div className="space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed">
-                Born from the belief that car culture can drive positive change, Fuel for the Folks transforms automotive enthusiasm into meaningful community impact. Our dedicated members combine their love for cars with a commitment to serving those in need.
+                We organize exciting car events and raffles that bring car enthusiasts together to raise funds for veterans, children's hospitals, and other important causes. We believe in the power of our community to make a tangible impact, one event at a time.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Through expertly organized car shows, charity drives, and community rallies, we create unique opportunities for automotive enthusiasts to make a difference. Every event we host serves a dual purpose: celebrating car culture while generating vital support for our community initiatives.
+                Our journey began with a simple idea: to unite MR2 car enthusiasts for a cause greater than ourselves. What started as a passionate group of car lovers has grown into a thriving community dedicated to giving back.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                What makes us unique is our ability to harness the incredible energy and generosity of the car community. Whether it's bringing smiles to children in hospitals, supporting our veterans, or ensuring every child has a gift during the holidays, we prove that passion for automobiles can fuel positive change.
+                Our story is one of friendship, shared interests, and a collective desire to make a difference, proving that even a niche community can have a big impact on the world.
               </p>
             </div>
             
@@ -53,15 +53,15 @@ const Mission: React.FC = () => {
           </div>
           
           <div className="order-1 md:order-2">
-            <div className="relative">
+            <div className="relative w-full md:w-11/12 lg:w-10/12 mx-auto">
               <img 
-                src="https://images.pexels.com/photos/2526128/pexels-photo-2526128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLZ2hHSQB44pujEkDa3HW5nNXD3c4MkuaVSDUBwrCnEw&s=10" 
                 alt="Car enthusiasts gathering for charity" 
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl w-full h-auto object-cover aspect-video"
               />
-              <div className="absolute -bottom-6 -left-6 bg-red-600 text-white p-6 rounded-lg shadow-lg">
-                <p className="font-bold text-2xl">5+ Years</p>
-                <p className="text-sm">of Community Impact</p>
+              <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-red-600 text-white p-4 md:p-6 rounded-lg shadow-lg">
+                <p className="font-bold text-xl md:text-2xl">5+ Years</p>
+                <p className="text-xs md:text-sm">of Community Impact</p>
                 <p className="text-xs mt-1">Est. 2019</p>
               </div>
             </div>

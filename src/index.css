@@ -17,13 +17,13 @@
 
   /* Custom smooth appearance animation for sections */
   section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    /* opacity: 0; */
+    /* transform: translateY(20px); */
+    /* transition: opacity 0.8s ease, transform 0.8s ease; */
   }
 
   section.visible {
-    opacity: 1;
-    transform: translateY(0);
+    /* opacity: 1; */
+    /* transform: translateY(0); */
   }
 }

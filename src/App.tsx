@@ -14,31 +14,28 @@ function App() {
     document.title = "Fuel for the Folks | Driving Change. Fueling Hope.";
     
     // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const target = document.querySelector(this.getAttribute('href') || '');
-        if (target) {
-          target.scrollIntoView({
+    const smoothScrollListener = (event: Event) => {
+      const anchorElement = event.currentTarget as HTMLAnchorElement;
+      const href = anchorElement.getAttribute('href');
+      if (href && href.startsWith("#")) {
+        event.preventDefault();
+        const targetElement = document.querySelector(href);
+        if (targetElement) {
+          targetElement.scrollIntoView({
             behavior: 'smooth'
           });
         }
-      });
+      }
+    };
+
+    const anchors = document.querySelectorAll('a[href^="#"]');
+    anchors.forEach(anchor => {
+      anchor.addEventListener('click', smoothScrollListener);
     });
     
     return () => {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.removeEventListener('click', function(e) {
-          e.preventDefault();
-          
-          const target = document.querySelector(this.getAttribute('href') || '');
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth'
-            });
-          }
-        });
+      anchors.forEach(anchor => {
+        anchor.removeEventListener('click', smoothScrollListener);
       });
     };
   }, []);
