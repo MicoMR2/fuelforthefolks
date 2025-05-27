@@ -17,7 +17,7 @@ const Mission: React.FC = () => {
           <div className="order-2 md:order-1">
             <div className="space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed">
-                We unite car enthusiasts through exciting events and raffles, raising crucial funds for veterans, children's hospitals, and other vital causes. We believe in our community's power to make a tangible impact, one event at a time.
+                We organize exciting car events and raffles that bring car enthusiasts together to raise funds for veterans, children's hospitals, and other important causes. We believe in the power of our community to make a tangible impact, one event at a time.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Our journey began with a simple idea: to unite MR2 car enthusiasts for a cause greater than ourselves. What started as a passionate group of car lovers has grown into a thriving community dedicated to giving back.
@@ -28,21 +28,21 @@ const Mission: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-3 gap-4 mt-10">
-              <div className="text-center p-4 rounded-lg hover:shadow-md transform hover:scale-105 transition-all duration-300 cursor-default">
+              <div className="text-center">
                 <div className="flex justify-center">
                   <Heart className="h-10 w-10 text-red-600 mb-3" />
                 </div>
                 <h3 className="font-medium text-gray-900">Compassion</h3>
                 <p className="text-sm text-gray-600 mt-2">Driving change with heart</p>
               </div>
-              <div className="text-center p-4 rounded-lg hover:shadow-md transform hover:scale-105 transition-all duration-300 cursor-default">
+              <div className="text-center">
                 <div className="flex justify-center">
                   <Users className="h-10 w-10 text-red-600 mb-3" />
                 </div>
                 <h3 className="font-medium text-gray-900">Community</h3>
                 <p className="text-sm text-gray-600 mt-2">United in purpose</p>
               </div>
-              <div className="text-center p-4 rounded-lg hover:shadow-md transform hover:scale-105 transition-all duration-300 cursor-default">
+              <div className="text-center">
                 <div className="flex justify-center">
                   <Calendar className="h-10 w-10 text-red-600 mb-3" />
                 </div>
