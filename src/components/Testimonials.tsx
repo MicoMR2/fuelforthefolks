@@ -93,21 +93,21 @@ const Testimonials: React.FC = () => {
             </div>
           </div>
           
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-8 items-center">
             <button 
               onClick={prevTestimonial}
-              className="mx-2 p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors"
+              className="group mx-2 p-3 rounded-full border border-gray-300 hover:bg-red-600 text-gray-600 hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="h-6 w-6 text-gray-600" />
+              <ChevronLeft className="h-5 w-5 transition-colors duration-300" />
             </button>
             
             {testimonials.map((_, index) => (
               <button 
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`mx-1 w-3 h-3 rounded-full ${
-                  index === currentIndex ? 'bg-red-600' : 'bg-gray-300'
+                className={`mx-1 w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
+                  index === currentIndex ? 'bg-red-600 scale-110' : 'bg-gray-300 hover:bg-red-400'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
@@ -115,10 +115,10 @@ const Testimonials: React.FC = () => {
             
             <button 
               onClick={nextTestimonial}
-              className="mx-2 p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors"
+              className="group mx-2 p-3 rounded-full border border-gray-300 hover:bg-red-600 text-gray-600 hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500"
               aria-label="Next testimonial"
             >
-              <ChevronRight className="h-6 w-6 text-gray-600" />
+              <ChevronRight className="h-5 w-5 transition-colors duration-300" />
             </button>
           </div>
         </div>
