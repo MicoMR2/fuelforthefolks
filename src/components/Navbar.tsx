@@ -39,39 +39,39 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex space-x-8">
           <a 
             href="#mission" 
-            className={`font-medium hover:text-red-600 transition-all duration-300 px-3 py-2 rounded-md ${
-              isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+            className={`font-medium hover:text-red-600 transition-colors ${
+              isScrolled ? 'text-gray-700' : 'text-white'
             }`}
           >
             Our Mission
           </a>
           <a 
             href="#impact" 
-            className={`font-medium hover:text-red-600 transition-all duration-300 px-3 py-2 rounded-md ${
-              isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+            className={`font-medium hover:text-red-600 transition-colors ${
+              isScrolled ? 'text-gray-700' : 'text-white'
             }`}
           >
             Impact
           </a>
           <a 
             href="#testimonials" 
-            className={`font-medium hover:text-red-600 transition-all duration-300 px-3 py-2 rounded-md ${
-              isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+            className={`font-medium hover:text-red-600 transition-colors ${
+              isScrolled ? 'text-gray-700' : 'text-white'
             }`}
           >
             Stories
           </a>
           <a 
             href="#contact" 
-            className={`font-medium hover:text-red-600 transition-all duration-300 px-3 py-2 rounded-md ${
-              isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+            className={`font-medium hover:text-red-600 transition-colors ${
+              isScrolled ? 'text-gray-700' : 'text-white'
             }`}
           >
             Contact
           </a>
           <a 
             href="#donate" 
-            className="bg-red-600 hover:bg-red-700 text-white font-medium px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg"
+            className="bg-red-600 hover:bg-red-700 text-white font-medium px-4 py-2 rounded-md transition-colors"
           >
             Donate
           </a>
@@ -94,35 +94,35 @@ const Navbar: React.FC = () => {
           <div className="px-4 pt-2 pb-4 space-y-3">
             <a 
               href="#mission" 
-              className="block font-medium text-gray-800 hover:text-red-600 hover:bg-gray-100 px-3 py-2 rounded-md transition-all duration-300"
+              className="block font-medium text-gray-800 hover:text-red-600"
               onClick={() => setIsOpen(false)}
             >
               Our Mission
             </a>
             <a 
               href="#impact" 
-              className="block font-medium text-gray-800 hover:text-red-600 hover:bg-gray-100 px-3 py-2 rounded-md transition-all duration-300"
+              className="block font-medium text-gray-800 hover:text-red-600"
               onClick={() => setIsOpen(false)}
             >
               Impact
             </a>
             <a 
               href="#testimonials" 
-              className="block font-medium text-gray-800 hover:text-red-600 hover:bg-gray-100 px-3 py-2 rounded-md transition-all duration-300"
+              className="block font-medium text-gray-800 hover:text-red-600"
               onClick={() => setIsOpen(false)}
             >
               Stories
             </a>
             <a 
               href="#contact" 
-              className="block font-medium text-gray-800 hover:text-red-600 hover:bg-gray-100 px-3 py-2 rounded-md transition-all duration-300"
+              className="block font-medium text-gray-800 hover:text-red-600"
               onClick={() => setIsOpen(false)}
             >
               Contact
             </a>
             <a 
               href="#donate" 
-              className="block w-full bg-red-600 hover:bg-red-700 text-white font-medium px-4 py-2 rounded-md text-center transition-all duration-300 hover:shadow-lg"
+              className="block w-full bg-red-600 hover:bg-red-700 text-white font-medium px-4 py-2 rounded-md text-center transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Donate

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { DollarSign, Calendar, Users } from 'lucide-react';
 
 interface DonationOptionProps {
@@ -50,57 +50,6 @@ const DonationOption: React.FC<DonationOptionProps> = ({
 };
 
 const Donate: React.FC = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
-  const [customAmount, setCustomAmount] = useState<string>('');
-
-  const presetAmounts = [25, 50, 100, 250];
-
-  const handlePresetAmountClick = (amount: number) => {
-    setSelectedAmount(amount);
-    setCustomAmount('');
-  };
-
-  const handleCustomAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setCustomAmount(value);
-    setSelectedAmount(null); // Deselect preset amount when custom is typed
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const finalAmount = selectedAmount !== null ? selectedAmount : parseFloat(customAmount);
-
-    if (!firstName || !lastName || !email) {
-      alert('Please fill in all required fields.');
-      return;
-    }
-    if (isNaN(finalAmount) || finalAmount <= 0) {
-      alert('Please select or enter a valid donation amount.');
-      return;
-    }
-
-    const formData = {
-      firstName,
-      lastName,
-      email,
-      amount: finalAmount,
-    };
-
-    console.log('Donation Form Data:', formData);
-    alert('Thank you for your donation! (This is a demo; no payment has been processed.) Data logged to console.');
-    
-    // Reset form fields
-    setFirstName('');
-    setLastName('');
-    setEmail('');
-    setSelectedAmount(null);
-    setCustomAmount('');
-  };
-
   return (
     <section id="donate" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4 md:px-6">
@@ -114,7 +63,7 @@ const Donate: React.FC = () => {
         
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <DonationOption 
-            icon={<DollarSign className="h-10 w-10 text-white" />}
+            icon={<DollarSign className="h-10 w-10 text-red-600" />}
             title="Make a Donation"
             description="Your financial contribution directly supports our initiatives for veterans, children's hospitals, and holiday toy drives."
             buttonText="Donate Now"
@@ -127,7 +76,7 @@ const Donate: React.FC = () => {
             title="Attend Events"
             description="Join our car shows, rallies, and community gatherings. Your ticket proceeds go directly to our charitable initiatives."
             buttonText="Upcoming Events"
-            buttonLink="javascript:void(0);"
+            buttonLink="#events"
           />
           
           <DonationOption 
@@ -135,32 +84,28 @@ const Donate: React.FC = () => {
             title="Volunteer With Us"
             description="Share your time and talents. We need organizers, promoters, and day-of-event helpers to make our mission possible."
             buttonText="Join Our Team"
-            buttonLink="javascript:void(0);"
+            buttonLink="#volunteer"
           />
         </div>
         
         <div id="donate-form" className="bg-white rounded-lg shadow-lg p-8 md:p-10 max-w-4xl mx-auto">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Donate Today</h3>
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="firstName" className="block text-gray-700 mb-2">First Name</label>
                 <input 
-                  type="text"
-                  id="firstName"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
+                  type="text" 
+                  id="firstName" 
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
                   placeholder="John"
                 />
               </div>
               <div>
                 <label htmlFor="lastName" className="block text-gray-700 mb-2">Last Name</label>
-                <input
-                  type="text"
-                  id="lastName"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
+                <input 
+                  type="text" 
+                  id="lastName" 
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
                   placeholder="Doe"
                 />
@@ -169,11 +114,9 @@ const Donate: React.FC = () => {
             
             <div>
               <label htmlFor="email" className="block text-gray-700 mb-2">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+              <input 
+                type="email" 
+                id="email" 
                 className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
                 placeholder="johndoe@example.com"
               />
@@ -182,16 +125,11 @@ const Donate: React.FC = () => {
             <div>
               <label className="block text-gray-700 mb-2">Donation Amount</label>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {presetAmounts.map((amount) => (
-                  <button
+                {[25, 50, 100, 250].map((amount) => (
+                  <button 
                     key={amount}
                     type="button"
-                    onClick={() => handlePresetAmountClick(amount)}
-                    className={`px-4 py-3 border-2 rounded-md focus:outline-none transition-colors ${
-                      selectedAmount === amount
-                        ? 'border-red-600 bg-red-100'
-                        : 'border-gray-300 hover:border-red-600 hover:bg-red-50'
-                    }`}
+                    className="px-4 py-3 border-2 border-gray-300 rounded-md focus:outline-none hover:border-red-600 hover:bg-red-50 transition-colors"
                   >
                     ${amount}
                   </button>
@@ -205,18 +143,16 @@ const Donate: React.FC = () => {
                 <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
                   <span className="text-gray-500">$</span>
                 </div>
-                <input
-                  type="number"
-                  id="custom"
-                  value={customAmount}
-                  onChange={handleCustomAmountChange}
+                <input 
+                  type="number" 
+                  id="custom" 
                   className="w-full px-4 py-3 pl-8 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
                   placeholder="Enter amount"
                 />
               </div>
             </div>
             
-            <button
+            <button 
               type="submit" 
               className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-3 rounded-md transition-colors"
             >
