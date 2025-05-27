@@ -30,13 +30,13 @@ const Hero: React.FC = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto leading-relaxed">
-          Where car culture meets compassion, creating powerful impact for those who need it most.
+          Uniting car culture and compassion to make a powerful impact for those most in need.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a 
             href="#donate" 
-            className="px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-md transition-all duration-300 transform hover:-translate-y-1 text-lg w-full sm:w-auto"
+            className="px-10 py-4 bg-red-600 hover:bg-red-700 text-white font-medium rounded-md transition-all duration-300 transform hover:-translate-y-1 text-lg w-full sm:w-auto"
           >
             Donate Now
           </a>

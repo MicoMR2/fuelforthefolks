@@ -30,7 +30,7 @@ const Impact: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Making Real Impact</h2>
           <div className="w-20 h-1 bg-red-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Fuel for the Folks is dedicated to making a meaningful difference in the lives of those in need. Our events support a variety of causes, from veterans' assistance programs and children's hospitals to cancer patients and emergency relief efforts.
+            Fuel for the Folks creates meaningful change for those in need. Our events support diverse causes, including veterans' assistance, children's hospitals, cancer patient aid, and emergency relief.
           </p>
         </div>
         
@@ -65,26 +65,26 @@ const Impact: React.FC = () => {
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">2023 Impact Highlights</h3>
               <p className="text-gray-700 mb-8 leading-relaxed">
-                Through the dedication of our car community and supporters, we've achieved remarkable milestones in serving our community.
+                Our dedicated car community and supporters achieved remarkable milestones in 2023, significantly impacting those we serve.
               </p>
               
               <div className="grid grid-cols-2 gap-8">
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-white hover:shadow-md transform hover:scale-105 transition-all duration-300 cursor-default">
                   <Trophy className="h-8 w-8 text-red-600 mx-auto mb-2" />
                   <p className="text-3xl font-bold text-red-600">12</p>
                   <p className="text-sm text-gray-600">Major Events</p>
                 </div>
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-white hover:shadow-md transform hover:scale-105 transition-all duration-300 cursor-default">
                   <Users className="h-8 w-8 text-red-600 mx-auto mb-2" />
                   <p className="text-3xl font-bold text-red-600">300+</p>
                   <p className="text-sm text-gray-600">Active Members</p>
                 </div>
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-white hover:shadow-md transform hover:scale-105 transition-all duration-300 cursor-default">
                   <Heart className="h-8 w-8 text-red-600 mx-auto mb-2" />
                   <p className="text-3xl font-bold text-red-600">$250K</p>
                   <p className="text-sm text-gray-600">Funds Raised</p>
                 </div>
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-white hover:shadow-md transform hover:scale-105 transition-all duration-300 cursor-default">
                   <Calendar className="h-8 w-8 text-red-600 mx-auto mb-2" />
                   <p className="text-3xl font-bold text-red-600">52</p>
                   <p className="text-sm text-gray-600">Weekly Meets</p>
