@@ -9,7 +9,7 @@ const Mission: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Mission</h2>
           <div className="w-20 h-1 bg-red-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            At Fuel for the Folks, our mission is to harness the passion and camaraderie of the MR2 car community to drive positive change.
+            At Fuel for the Folks, our mission is to harness the passion and camaraderie of the DMV and MR2 car community as a whole to drive positive change.
           </p>
         </div>
         
